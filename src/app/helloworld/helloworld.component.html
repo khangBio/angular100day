@@ -1,0 +1,35 @@
+<p>helloworld works!</p>
+<!--INTERPOLATION-->
+<p>Họ và tên: {{user.name}}</p>
+<p>Tuổi: {{user.name}}</p>
+
+<!--PROPERTY BINDING-->
+<input type="text" [value]="user.name"/>
+
+<!--EVENT LISTENER-->
+<button type="button" (click)="hander()">Click me</button>
+
+<!--TWO WAY BINDING FromModules-->
+<br><br>
+<input type="text" [(ngModel)]="address"/>
+<br><br>
+<p>{{address}}</p>
+
+<p *ngIf="user.age >= 22; else under22">You are old the Man</p>
+<ng-template #under22>
+  <p>You are young the Man</p>
+</ng-template>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{user.age}}
+<button (click)="user.age = user.age + 1">+</button>
+<br><br>
+<div class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></div>
+
+<!--[class.name-class]="isActive"-->
+<!--[class]="my-class-1 my-class-2 my-class-3"-->
+<!--[class]="['foo', 'bar']" Array String	-->
+<!--[class]	= "{foo: true, bar: false}" Object-->
+<button (click)="isDanger = !isDanger">Toogle Danger</button>
+<br>
+<button (click)="isWarning = !isWarning">Toogle Warning</button>

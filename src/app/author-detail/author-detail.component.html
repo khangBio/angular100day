@@ -1,0 +1,6 @@
+<!--<p>author-detail works!</p>-->
+<div style="text-align: center">
+  {{author?.firstName}} {{author?.lastName}}
+  <button style="margin-left: 1em" (click)="select.emit(author)" >Select</button>
+  <button style="margin-left: 1em" (click)="handleDelete()">Delete</button>
+</div>

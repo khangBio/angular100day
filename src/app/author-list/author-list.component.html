@@ -1,0 +1,8 @@
+<p style="text-align: center">Component Parent!</p>
+<app-author-detail *ngFor="let author of authors" [author]="author"
+                   (select)="onSelected($event)" (deleteAuthor)="handleDeleteAuthor($event)">
+</app-author-detail>
+
+<div style="text-align: center; color: red">
+  Current author: {{currentAuthor.firstName}} {{currentAuthor.lastName}}
+</div>

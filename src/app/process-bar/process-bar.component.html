@@ -1,0 +1,14 @@
+<!--
+[style.width]="”someValue”"
+[style.property.unit]=”expression”
+[style]="{width: '100px', height: '100px'}"
+-->
+<p>Progress bar demo</p>
+<div class="progress-bar-container" style="background: gray">
+  <div
+    class="progress"
+    [style]="{backgroundColor: progressColor}"
+    [style.width.%]="progress"
+  >
+  </div>
+</div>

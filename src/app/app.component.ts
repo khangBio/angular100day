@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular100day';
+  currentProgress = 50;
+  isChecked = false;
 }
